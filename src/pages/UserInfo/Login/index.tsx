@@ -223,7 +223,7 @@ const Login: React.FC = () => {
                   prefix: <UserOutlined />,
                 }}
                 placeholder={intl.formatMessage({
-                  id: 'pages.login.username.required',
+                  id: 'pages.login.username.placeholder',
                   defaultMessage: '用户名: admin or user',
                 })}
                 rules={[

@@ -12,6 +12,17 @@
  */
 export default [
   {
+    path: '/userinfo',
+    layout: false,
+    routes: [
+      {
+        name: 'userlogin',
+        path: '/userinfo/login',
+        component: './UserInfo/Login',
+      },
+    ],
+  },
+  {
     path: '/user',
     layout: false,
     routes: [
