@@ -8,7 +8,6 @@ import routes from './routes';
 const { REACT_APP_ENV = 'dev' } = process.env;
 
 export default defineConfig({
-
   // base: '/kim-admin/',
   // publicPath: '/kim-admin/',
   /**
@@ -154,5 +153,6 @@ export default defineConfig({
   mfsu: {
     strategy: 'normal',
   },
+  esbuildMinifyIIFE: true,
   requestRecord: {},
 });
