@@ -8,7 +8,9 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
+    "@ant-design/pro-components": "^2.7.19",
     "antd": "^5.21.4",
+    "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
