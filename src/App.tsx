@@ -3,6 +3,8 @@ import './App.css';
 import { HeartOutlined, SmileOutlined } from '@ant-design/icons';
 import type { MenuDataItem } from '@ant-design/pro-components';
 import { PageContainer, ProLayout } from '@ant-design/pro-components';
+import { ConfigProvider, Spin, theme as antdTheme } from 'antd';
+import {Footer} from '@/components'
 
 const IconMap = {
     smile: <SmileOutlined />,
@@ -54,6 +56,8 @@ export default () => (
             pathname: '/welcome/welcome',
         }}
         menu={{ request: async () => loopMenuItem(defaultMenus) }}
+        footerRender={Footer}
+
     >
         <PageContainer content="欢迎使用">
             <div
@@ -65,6 +69,7 @@ export default () => (
                 Hello World
             </div>
         </PageContainer>
+
     </ProLayout>
 );
 
