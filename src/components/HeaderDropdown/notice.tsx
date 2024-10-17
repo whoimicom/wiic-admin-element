@@ -10,7 +10,6 @@ import { getNoticeList } from '@/api/layout.api';
 import { ReactComponent as NoticeSvg } from '@/assets/header/notice.svg';
 import { EventStatus } from '@/interface/layout/notice.interface';
 import { useLocale } from '@/locales';
-
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 const { TabPane } = Tabs;
