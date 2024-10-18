@@ -8,5 +8,6 @@
 import Footer from './Footer';
 // import { Question, SelectLang } from './RightContent';
 import { Question } from './RightContent';
+import   HeaderNoticeComponent  from './HeaderDropdown/notice.tsx';
 
-export { Footer, Question };
+export { Footer, Question ,HeaderNoticeComponent};

@@ -7,10 +7,10 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getNoticeList } from '@/api/layout.api';
-// import { ReactComponent as NoticeSvg } from '@/assets/header/notice.svg';
-import  noticeSvg  from '@/assets/header/notice.svg';
+import { ReactComponent as NoticeSvg } from '@/assets/header/notice.svg';
 import { EventStatus } from '@/interface/layout/notice.interface';
 import { useLocale } from '@/locales';
+
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 const { TabPane } = Tabs;
@@ -19,7 +19,7 @@ const HeaderNoticeComponent: FC = () => {
   const [visible, setVisible] = useState(false);
   const [noticeList, setNoticeList] = useState<Notice[]>([]);
   const [loading, setLoading] = useState(false);
-  // const { noticeCount } = useSelector(state => state.user);
+  const { noticeCount } = useSelector(state => state.user);
   const { formatMessage } = useLocale();
 
   const noticeListFilter = <T extends Notice['type']>(type: T) => {
@@ -133,11 +133,9 @@ const HeaderNoticeComponent: FC = () => {
           id: 'gloabal.tips.theme.noticeTooltip',
         })}
       >
-        {/*<Badge count={noticeCount} overflowCount={999}>*/}
-        <Badge count={0} overflowCount={999}>
+        <Badge count={noticeCount} overflowCount={999}>
           <span className="notice" id="notice-center">
-            {/*<NoticeSvg className="anticon" />*/}
-              <img src={noticeSvg} className={"antIcon"} alt="notice" />
+            <NoticeSvg className="anticon" />
           </span>
         </Badge>
       </Tooltip>

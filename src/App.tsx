@@ -4,7 +4,7 @@ import { HeartOutlined, SmileOutlined } from '@ant-design/icons';
 import type { MenuDataItem } from '@ant-design/pro-components';
 import { PageContainer, ProLayout } from '@ant-design/pro-components';
 import { ConfigProvider, Spin, theme as antdTheme } from 'antd';
-import {Footer} from '@/components'
+import {Footer,HeaderNoticeComponent} from '@/components'
 
 const IconMap = {
     smile: <SmileOutlined />,
@@ -56,6 +56,7 @@ export default () => (
             pathname: '/welcome/welcome',
         }}
         menu={{ request: async () => loopMenuItem(defaultMenus) }}
+        headerRender={HeaderNoticeComponent}
         footerRender={Footer}
 
     >
