@@ -10,16 +10,30 @@ import {
     ProLayout,
     SettingDrawer,
 } from '@ant-design/pro-components';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import defaultProps from './_defaultProps';
+import useAuth from '@/hooks/useAuth';
 
 export default () => {
     const [settings, setSetting] = useState<Partial<ProSettings> | undefined>({
-        layout: 'side',
+        layout: 'mix',
+        navTheme: 'realDark',
+        fixedHeader: false,
+        fixSiderbar: true,
+        contentWidth: 'Fluid',
+
     });
 
     const [pathname, setPathname] = useState('/list/sub-page/sub-sub-page1');
-
+    const navigate = useNavigate();
+    const isAuthenticated = useAuth();
+    useEffect(() => {
+        if (!isAuthenticated) {
+            console.log("-----------------")
+            navigate('/login'); // 使用 navigate 替换 history.push
+        }
+    }, [isAuthenticated, history]);
     return (
         <div
             id="test-pro-layout"

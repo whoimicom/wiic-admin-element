@@ -10,7 +10,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { LocaleFormatter, useLocale } from '@/locales';
 import { formatSearch } from '@/utils/formatSearch';
 
-import { loginAsync } from '../../stores/user.action';
+import { loginAsync } from '@/stores/user.action.ts';
 
 const initialValues: LoginParams = {
   username: 'guest',
