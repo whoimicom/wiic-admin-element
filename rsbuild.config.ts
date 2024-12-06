@@ -1,7 +1,7 @@
 import {defineConfig} from '@rsbuild/core';
 import {pluginReact} from '@rsbuild/plugin-react';
 import {pluginSvgr} from '@rsbuild/plugin-svgr';
-
+export const BASE_PATH = '/wiic-antd-react';
 export default defineConfig({
     plugins: [
         pluginReact(),
@@ -14,7 +14,8 @@ export default defineConfig({
     ],
     server: {
         // base path
-        base: '/wii-antd-react',
+        // base: '/wiic-antd-react',
+        base: BASE_PATH,
     },
     tools: {
         swc: {

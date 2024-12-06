@@ -12,6 +12,7 @@ import {
 } from '@ant-design/pro-components';
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import RenderRouter from './routes';
 import defaultProps from './_defaultProps';
 import useAuth from '@/hooks/useAuth';
 
