@@ -21,8 +21,10 @@ export default () => {
         layout: 'mix',
         navTheme: 'realDark',
         fixedHeader: false,
-        fixSiderbar: true,
+        fixSiderbar: false,
         contentWidth: 'Fluid',
+        splitMenus:false,
+        siderMenuType:"sub"
 
     });
 
@@ -83,6 +85,7 @@ export default () => {
                         <GithubFilled key="GithubFilled" />,
                     ];
                 }}
+
                 menuItemRender={(item, dom) => (
                     <div
                         onClick={() => {
@@ -98,7 +101,7 @@ export default () => {
                     <ProCard
                         style={{
                             height: '100vh',
-                            minHeight: 800,
+                            minHeight: 500,
                         }}
                     >
                         <div />

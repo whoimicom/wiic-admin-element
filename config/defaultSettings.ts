@@ -13,7 +13,7 @@ const Settings: ProLayoutProps & {
   layout: 'mix',
   contentWidth: 'Fluid',
   fixedHeader: false,
-  fixSiderbar: true,
+  fixSiderbar: false,
   colorWeak: false,
   title: 'Ant Design Pro',
   pwa: true,
