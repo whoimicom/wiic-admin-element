@@ -20,11 +20,40 @@ declare global {
   /**
    * 分页响应对象
    */
-  interface Page<T> {
+  interface PageResult<T> {
     /** 数据列表 */
     list: T;
     /** 总数 */
     total: number;
+  }
+
+  interface Page<T> {
+    content: T;
+    pageable: {
+      pageNumber: number;
+      pageSize: number;
+      sort: {
+        empty: boolean;
+        sorted: boolean;
+        unsorted: boolean;
+      };
+      offset: number;
+      paged: boolean;
+      unpaged: boolean;
+    };
+    last: boolean;
+    totalPages: number;
+    totalElements: number;
+    size: number;
+    number: number;
+    sort: {
+      empty: boolean;
+      sorted: boolean;
+      unsorted: boolean;
+    };
+    first: boolean;
+    numberOfElements: number;
+    empty: boolean;
   }
 
   /**

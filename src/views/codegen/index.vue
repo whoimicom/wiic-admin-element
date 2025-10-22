@@ -815,8 +815,8 @@ function handleQuery() {
   loading.value = true;
   GeneratorAPI.getTablePage(queryParams)
     .then((data) => {
-      pageData.value = data.totalElements;
-      total.value = data.content;
+      pageData.value = data.content;
+      total.value = data.totalElements;
     })
     .finally(() => {
       loading.value = false;

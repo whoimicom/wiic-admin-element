@@ -200,7 +200,7 @@ function fetchData() {
   DictAPI.getDictItemPage(dictCode.value, queryParams)
     .then((data) => {
       tableData.value = data.totalElements;
-      total.value = data.content;
+      total.value = data.totalElements;
     })
     .finally(() => {
       loading.value = false;

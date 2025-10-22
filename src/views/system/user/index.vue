@@ -319,8 +319,8 @@ async function fetchData() {
   loading.value = true;
   try {
     const data = await UserAPI.getPage(queryParams);
-    pageData.value = data.totalElements;
-    total.value = data.content;
+    total.value = data.totalElements;
+    pageData.value = data.content;
   } finally {
     loading.value = false;
   }

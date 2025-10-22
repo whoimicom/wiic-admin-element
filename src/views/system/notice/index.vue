@@ -332,8 +332,8 @@ function fetchData() {
   loading.value = true;
   NoticeAPI.getPage(queryParams)
     .then((data) => {
-      pageData.value = data.totalElements;
-      total.value = data.content;
+      pageData.value = data.content;
+      total.value = data.totalElements;
     })
     .finally(() => {
       loading.value = false;

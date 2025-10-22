@@ -176,7 +176,7 @@ function fetchData() {
   DictAPI.getPage(queryParams)
     .then((data) => {
       tableData.value = data.totalElements;
-      total.value = data.content;
+      total.value = data.totalElements;
     })
     .finally(() => {
       loading.value = false;
