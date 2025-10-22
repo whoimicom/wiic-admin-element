@@ -121,8 +121,8 @@ watch(
  * 获取我的通知公告
  */
 function featchMyNotice() {
-  NoticeAPI.getMyNoticePage({ pageNumber: 1, pageSize: 5, isRead: 0 }).then((data) => {
-    noticeList.value = data.totalElements;
+  NoticeAPI.getMyNoticePage({ pageNumber: 1, pageSize: 5, isRead: false }).then((data) => {
+    noticeList.value = data.content;
   });
 }
 

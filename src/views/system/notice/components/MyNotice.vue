@@ -61,7 +61,7 @@
         <el-table-column align="center" label="发布人" prop="publisher" width="150" />
         <el-table-column align="center" label="状态" width="100">
           <template #default="scope">
-            <el-tag v-if="scope.row.isRead == 1" type="success">已读</el-tag>
+            <el-tag v-if="scope.row.isRead" type="success">已读</el-tag>
             <el-tag v-else type="info">未读</el-tag>
           </template>
         </el-table-column>
@@ -110,6 +110,8 @@
 </template>
 
 <script setup lang="ts">
+// import { Search, Timer } from "@element-plus/icons-vue";
+
 defineOptions({
   name: "MyNotice",
   inheritAttrs: false,

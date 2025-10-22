@@ -61,7 +61,7 @@ export interface NoticePageQuery extends PageQuery {
   /** 发布状态(0:草稿;1:已发布;2:已撤回) */
   publishStatus?: number;
   /** 是否已读(1:是;0:否) */
-  isRead?: number;
+  isRead?: boolean;
 }
 export interface NoticeForm {
   /** 通知ID(新增不填) */
@@ -71,7 +71,7 @@ export interface NoticeForm {
   /** 内容 */
   content?: string;
   /** 类型 */
-  type?: number;
+  type?: string;
   /** 优先级/级别 */
   level?: string;
   /** 目标类型 */
@@ -87,9 +87,9 @@ export interface NoticePageVO {
   /** 内容 */
   content?: string;
   /** 类型 */
-  type?: number;
+  type?: string;
   /** 发布人ID */
-  publisherId?: bigint;
+  publisher?: string;
   /** 优先级 */
   priority?: number;
   /** 目标类型 */
@@ -109,7 +109,7 @@ export interface NoticeDetailVO {
   /** 内容 */
   content?: string;
   /** 类型 */
-  type?: number;
+  type?: string;
   /** 发布人名称 */
   publisher?: string;
   /** 优先级/级别 */
