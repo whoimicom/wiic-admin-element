@@ -97,9 +97,9 @@ export interface MenuForm {
   /** 权限标识 */
   perm?: string;
   /** 【菜单】是否开启页面缓存 */
-  keepAlive?: number;
+  keepAlive?: boolean;
   /** 【目录】只有一个子路由是否始终显示 */
-  alwaysShow?: number;
+  alwaysShow?: boolean;
   /** 其他参数 */
   params?: KeyValue[];
 }

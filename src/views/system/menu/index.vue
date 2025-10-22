@@ -266,8 +266,8 @@
 
         <el-form-item v-if="formData.type !== MenuTypeEnum.BUTTON" prop="visible" label="显示状态">
           <el-radio-group v-model="formData.visible">
-            <el-radio :value="1">显示</el-radio>
-            <el-radio :value="0">隐藏</el-radio>
+            <el-radio :value="true">显示</el-radio>
+            <el-radio :value="false">隐藏</el-radio>
           </el-radio-group>
         </el-form-item>
 
@@ -293,15 +293,15 @@
           </template>
 
           <el-radio-group v-model="formData.alwaysShow">
-            <el-radio :value="1">是</el-radio>
-            <el-radio :value="0">否</el-radio>
+            <el-radio :value="true">是</el-radio>
+            <el-radio :value="false">否</el-radio>
           </el-radio-group>
         </el-form-item>
 
         <el-form-item v-if="formData.type === MenuTypeEnum.MENU" label="缓存页面">
           <el-radio-group v-model="formData.keepAlive">
-            <el-radio :value="1">开启</el-radio>
-            <el-radio :value="0">关闭</el-radio>
+            <el-radio :value="true">开启</el-radio>
+            <el-radio :value="false">关闭</el-radio>
           </el-radio-group>
         </el-form-item>
 
@@ -376,8 +376,8 @@ const initialMenuFormData = ref<MenuForm>({
   visible: true,
   sort: 1,
   type: MenuTypeEnum.MENU, // 默认菜单
-  alwaysShow: 0,
-  keepAlive: 1,
+  alwaysShow: false,
+  keepAlive: true,
   params: [],
 });
 // 菜单表单数据
@@ -529,8 +529,8 @@ function resetForm() {
     visible: true,
     sort: 1,
     type: MenuTypeEnum.MENU, // 默认菜单
-    alwaysShow: 0,
-    keepAlive: 1,
+    alwaysShow: false,
+    keepAlive: true,
     params: [],
   };
 }
