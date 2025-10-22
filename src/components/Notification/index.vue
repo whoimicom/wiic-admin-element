@@ -63,7 +63,7 @@
       <div class="flex-y-center mb-16px text-13px text-color-secondary">
         <span class="flex-y-center">
           <el-icon><User /></el-icon>
-          {{ noticeDetail.publisherName }}
+          {{ noticeDetail.publisher }}
         </span>
         <span class="ml-2 flex-y-center">
           <el-icon><Timer /></el-icon>

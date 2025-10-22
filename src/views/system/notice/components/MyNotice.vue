@@ -44,7 +44,7 @@
             <DictLabel v-model="scope.row.type" code="notice_type" />
           </template>
         </el-table-column>
-        <el-table-column align="center" label="发布人" prop="publisherName" width="100" />
+        <el-table-column align="center" label="发布人" prop="publisher" width="100" />
         <el-table-column align="center" label="通知等级" width="100">
           <template #default="scope">
             <DictLabel v-model="scope.row.level" code="notice_level" />
@@ -58,7 +58,7 @@
           width="150"
         />
 
-        <el-table-column align="center" label="发布人" prop="publisherName" width="150" />
+        <el-table-column align="center" label="发布人" prop="publisher" width="150" />
         <el-table-column align="center" label="状态" width="100">
           <template #default="scope">
             <el-tag v-if="scope.row.isRead == 1" type="success">已读</el-tag>
@@ -93,7 +93,7 @@
         <div class="notice-detail__meta">
           <span>
             <el-icon><User /></el-icon>
-            {{ noticeDetail.publisherName }}
+            {{ noticeDetail.publisher }}
           </span>
           <span class="ml-2">
             <el-icon><Timer /></el-icon>

@@ -71,7 +71,7 @@
             <DictLabel v-model="scope.row.type" :code="'notice_type'" />
           </template>
         </el-table-column>
-        <el-table-column align="center" label="发布人" prop="publisherName" width="150" />
+        <el-table-column align="center" label="发布人" prop="publisher" width="150" />
         <el-table-column align="center" label="通知等级" width="100">
           <template #default="scope">
             <DictLabel v-model="scope.row.level" code="notice_level" />
@@ -241,7 +241,7 @@
           <el-tag v-else-if="currentNotice.publishStatus == -1" type="warning">已撤回</el-tag>
         </el-descriptions-item>
         <el-descriptions-item label="发布人：">
-          {{ currentNotice.publisherName }}
+          {{ currentNotice.publisher }}
         </el-descriptions-item>
         <el-descriptions-item label="发布时间：">
           {{ currentNotice.publishTime }}

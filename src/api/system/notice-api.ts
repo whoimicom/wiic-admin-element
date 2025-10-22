@@ -111,7 +111,7 @@ export interface NoticeDetailVO {
   /** 类型 */
   type?: number;
   /** 发布人名称 */
-  publisherName?: string;
+  publisher?: string;
   /** 优先级/级别 */
   level?: string;
   /** 发布时间 */
