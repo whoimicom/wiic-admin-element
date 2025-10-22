@@ -73,7 +73,7 @@
         <el-table-column label="权限标识" align="center" width="200" prop="perm" />
         <el-table-column label="状态" align="center" width="80">
           <template #default="scope">
-            <el-tag v-if="scope.row.visible === 1" type="success">显示</el-tag>
+            <el-tag v-if="scope.row.visible" type="success">显示</el-tag>
             <el-tag v-else type="info">隐藏</el-tag>
           </template>
         </el-table-column>
@@ -373,7 +373,7 @@ const menuOptions = ref<OptionType[]>([]);
 const initialMenuFormData = ref<MenuForm>({
   id: undefined,
   parentId: "0",
-  visible: 1,
+  visible: true,
   sort: 1,
   type: MenuTypeEnum.MENU, // 默认菜单
   alwaysShow: 0,
@@ -526,7 +526,7 @@ function resetForm() {
   formData.value = {
     id: undefined,
     parentId: "0",
-    visible: 1,
+    visible: true,
     sort: 1,
     type: MenuTypeEnum.MENU, // 默认菜单
     alwaysShow: 0,
