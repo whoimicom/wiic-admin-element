@@ -91,7 +91,7 @@ export default [
         ...elementPlusComponents, // Element Plus 组件
         // 全局类型定义，解决 TypeScript 中定义但 ESLint 不识别的问题
         PageQuery: "readonly",
-        PageResult: "readonly",
+        Page: "readonly",
         OptionType: "readonly",
         ApiResponse: "readonly",
         ExcelResult: "readonly",

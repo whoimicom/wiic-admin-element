@@ -282,8 +282,8 @@ function fetchData() {
   loading.value = true;
   RoleAPI.getPage(queryParams)
     .then((data) => {
-      roleList.value = data.list;
-      total.value = data.total;
+      roleList.value = data.totalElements;
+      total.value = data.content;
     })
     .finally(() => {
       loading.value = false;

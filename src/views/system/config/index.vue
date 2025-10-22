@@ -185,8 +185,8 @@ function fetchData() {
   loading.value = true;
   ConfigAPI.getPage(queryParams)
     .then((data) => {
-      pageData.value = data.list;
-      total.value = data.total;
+      pageData.value = data.totalElements;
+      total.value = data.content;
     })
     .finally(() => {
       loading.value = false;

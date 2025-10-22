@@ -873,8 +873,8 @@ function fetchPageData(formData: IObject = {}, isRestart = false) {
         if (props.contentConfig.parseData) {
           data = props.contentConfig.parseData(data);
         }
-        pagination.total = data.total;
-        pageData.value = data.list;
+        pagination.total = data.content;
+        pageData.value = data.totalElements;
       } else {
         pageData.value = data;
       }

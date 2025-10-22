@@ -122,7 +122,7 @@ watch(
  */
 function featchMyNotice() {
   NoticeAPI.getMyNoticePage({ pageNumber: 1, pageSize: 5, isRead: 0 }).then((data) => {
-    noticeList.value = data.list;
+    noticeList.value = data.totalElements;
   });
 }
 
